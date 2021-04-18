@@ -1,1 +1,2 @@
-Please Give a Star if the SQL helps you
+#Credits
+Philippine Standard Geographic Code
