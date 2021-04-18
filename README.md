@@ -22,4 +22,5 @@ Special Thanks to [John Mark Libued](https://www.facebook.com/johnmark.libued)
 
 Changelog
 ---------
+1.0
 * Initial Version Release, contains MySQL Tables for Regions, Province, Municipality and Barangays
