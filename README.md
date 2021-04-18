@@ -1,2 +1,1 @@
-#Credits
-Philippine Standard Geographic Code
+Credits to Philippine Standard Geographic Code
