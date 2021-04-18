@@ -14,7 +14,7 @@ MYSQL
 
 Credits
 -------
-Credits to [Philippine Standard Geographic COde](https://psa.gov.ph/classification/psgc/) for the raw data of all the regions, province, cities & municipalities and barangays in Philippines.
+Credits to [Philippine Standard Geographic Code](https://psa.gov.ph/classification/psgc/) for the raw data of all the regions, province, cities & municipalities and barangays in Philippines.
 
 Contributors
 -------
