@@ -24,5 +24,6 @@ Changelog
 ---------
 1.0
 * Initial Version Release, contains MySQL Tables for Regions, Province, Municipality and Barangays
+---------
 1.1
 * Added JSON
