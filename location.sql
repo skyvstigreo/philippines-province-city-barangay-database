@@ -1,22 +1,27 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.5.8-MariaDB - mariadb.org binary distribution
+-- Server version:               10.4.27-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
--- HeidiSQL Version:             11.0.0.5919
+-- HeidiSQL Version:             12.4.0.6659
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
 -- Dumping database structure for philippines_database
-CREATE DATABASE IF NOT EXISTS `philippines_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+DROP DATABASE IF EXISTS `philippines_database`;
+CREATE DATABASE IF NOT EXISTS `philippines_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `philippines_database`;
 
 -- Dumping structure for table philippines_database.table_barangay
+DROP TABLE IF EXISTS `table_barangay`;
 CREATE TABLE IF NOT EXISTS `table_barangay` (
   `barangay_id` int(11) NOT NULL AUTO_INCREMENT,
   `municipality_id` int(11) NOT NULL,
@@ -25,10 +30,9 @@ CREATE TABLE IF NOT EXISTS `table_barangay` (
   UNIQUE KEY `UQT_barangay` (`municipality_id`,`barangay_name`),
   KEY `IDX_barangay_name` (`barangay_name`) USING BTREE,
   CONSTRAINT `FK_table_barangay_table_municipality` FOREIGN KEY (`municipality_id`) REFERENCES `table_municipality` (`municipality_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42047 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42047 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Dumping data for table philippines_database.table_barangay: ~42,046 rows (approximately)
-/*!40000 ALTER TABLE `table_barangay` DISABLE KEYS */;
 INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
 	(1, 1, 'Adams (Pob.)'),
 	(2, 2, 'Bani'),
@@ -10029,7 +10033,8 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(10033, 388, 'Fatima III'),
 	(10061, 388, 'H-2'),
 	(9989, 388, 'Langkaan I'),
-	(10034, 388, 'Langkaan II'),
+	(10034, 388, 'Langkaan II');
+INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
 	(10004, 388, 'Luzviminda I'),
 	(10035, 388, 'Luzviminda II'),
 	(9990, 388, 'Paliparan I'),
@@ -20029,7 +20034,8 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(19997, 752, 'Pajo'),
 	(19998, 752, 'Pandan'),
 	(19999, 752, 'Panuran'),
-	(20000, 752, 'Pasig'),
+	(20000, 752, 'Pasig');
+INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
 	(20001, 752, 'Patag'),
 	(20002, 752, 'Poblacion Ilawod'),
 	(20003, 752, 'Poblacion Ilaya'),
@@ -30029,7 +30035,8 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(29995, 1120, 'Lower Pulacan'),
 	(30007, 1120, 'Lower Sang-an'),
 	(29996, 1120, 'New Labangan'),
-	(29997, 1120, 'Noboran'),
+	(29997, 1120, 'Noboran');
+INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
 	(29998, 1120, 'Old Labangan'),
 	(29999, 1120, 'San Isidro'),
 	(30000, 1120, 'Santa Cruz'),
@@ -32357,8 +32364,7 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(32325, 1219, 'Catarman'),
 	(32326, 1219, 'Cebulin'),
 	(32327, 1219, 'Clarin'),
-	(32328, 1219, 'Danao');
-INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
+	(32328, 1219, 'Danao'),
 	(32329, 1219, 'Deboloc'),
 	(32330, 1219, 'Divisoria'),
 	(32331, 1219, 'Eastern Looc'),
@@ -40030,7 +40036,8 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(39997, 1520, 'Gawang'),
 	(39998, 1520, 'Kabengi'),
 	(39999, 1520, 'Kitango'),
-	(40000, 1520, 'Kitapok'),
+	(40000, 1520, 'Kitapok');
+INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`) VALUES
 	(40001, 1520, 'Madia'),
 	(40002, 1520, 'Salbu'),
 	(40003, 1521, 'Bulayan'),
@@ -42077,9 +42084,9 @@ INSERT INTO `table_barangay` (`barangay_id`, `municipality_id`, `barangay_name`)
 	(42044, 1634, 'San Roque (Pob.)'),
 	(42045, 1634, 'San Vicente (Pob.)'),
 	(42046, 1634, 'Santa Cruz (Pob.)');
-/*!40000 ALTER TABLE `table_barangay` ENABLE KEYS */;
 
 -- Dumping structure for table philippines_database.table_municipality
+DROP TABLE IF EXISTS `table_municipality`;
 CREATE TABLE IF NOT EXISTS `table_municipality` (
   `municipality_id` int(11) NOT NULL AUTO_INCREMENT,
   `province_id` int(11) DEFAULT NULL,
@@ -42089,10 +42096,9 @@ CREATE TABLE IF NOT EXISTS `table_municipality` (
   KEY `IDX_province_id` (`province_id`) USING BTREE,
   KEY `IDX_municipality_name` (`municipality_name`) USING BTREE,
   CONSTRAINT `FK_table_municipality_table_province` FOREIGN KEY (`province_id`) REFERENCES `table_province` (`province_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1635 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1635 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Dumping data for table philippines_database.table_municipality: ~1,634 rows (approximately)
-/*!40000 ALTER TABLE `table_municipality` DISABLE KEYS */;
 INSERT INTO `table_municipality` (`municipality_id`, `province_id`, `municipality_name`) VALUES
 	(1356, 1, 'Caloocan City'),
 	(1360, 1, 'Las Piñas City'),
@@ -43728,9 +43734,9 @@ INSERT INTO `table_municipality` (`municipality_id`, `province_id`, `municipalit
 	(1632, 82, 'Loreto'),
 	(1633, 82, 'San Jose (Capital)'),
 	(1634, 82, 'Tubajon');
-/*!40000 ALTER TABLE `table_municipality` ENABLE KEYS */;
 
 -- Dumping structure for table philippines_database.table_province
+DROP TABLE IF EXISTS `table_province`;
 CREATE TABLE IF NOT EXISTS `table_province` (
   `province_id` int(11) NOT NULL AUTO_INCREMENT,
   `region_id` int(11) NOT NULL,
@@ -43740,10 +43746,9 @@ CREATE TABLE IF NOT EXISTS `table_province` (
   KEY `IDX_province_name` (`province_name`) USING BTREE,
   KEY `IDX_region_id` (`region_id`) USING BTREE,
   CONSTRAINT `FK_table_province_table_region` FOREIGN KEY (`region_id`) REFERENCES `table_region` (`region_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Dumping data for table philippines_database.table_province: ~82 rows (approximately)
-/*!40000 ALTER TABLE `table_province` DISABLE KEYS */;
 INSERT INTO `table_province` (`province_id`, `region_id`, `province_name`) VALUES
 	(1, 1, 'Metro Manila'),
 	(67, 2, 'Abra'),
@@ -43827,9 +43832,9 @@ INSERT INTO `table_province` (`province_id`, `region_id`, `province_name`) VALUE
 	(75, 17, 'Maguindanao'),
 	(76, 17, 'Sulu'),
 	(77, 17, 'Tawi-Tawi');
-/*!40000 ALTER TABLE `table_province` ENABLE KEYS */;
 
 -- Dumping structure for table philippines_database.table_region
+DROP TABLE IF EXISTS `table_region`;
 CREATE TABLE IF NOT EXISTS `table_region` (
   `region_id` int(11) NOT NULL AUTO_INCREMENT,
   `region_name` varchar(50) NOT NULL,
@@ -43837,10 +43842,9 @@ CREATE TABLE IF NOT EXISTS `table_region` (
   PRIMARY KEY (`region_id`),
   UNIQUE KEY `UQT_region_name` (`region_name`) USING BTREE,
   KEY `IDX_region_name` (`region_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Dumping data for table philippines_database.table_region: ~17 rows (approximately)
-/*!40000 ALTER TABLE `table_region` DISABLE KEYS */;
 INSERT INTO `table_region` (`region_id`, `region_name`, `region_description`) VALUES
 	(1, 'NCR', 'National Capital Region'),
 	(2, 'CAR', 'Cordillera Administrative Region'),
@@ -43859,8 +43863,9 @@ INSERT INTO `table_region` (`region_id`, `region_name`, `region_description`) VA
 	(15, 'Region XII', 'SOCCSKSARGEN'),
 	(16, 'Region XIII', 'CARAGA'),
 	(17, 'ARMM', 'Autonomous Region in Muslim Mindanao');
-/*!40000 ALTER TABLE `table_region` ENABLE KEYS */;
 
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
