@@ -2,7 +2,7 @@ Philippines Regions, Province, Cities/Municipalities and Barangay
 ===============================
 https://github.com/skyvstigreo/philippines-province-city-barangay-database
 
-[Aimer Sherdan Ong](https://www.facebook.com/skyvsaimii/)
+[Aimer Sherdan Ong](https://www.facebook.com/shisune28/)
 
 Simple SQL Script containing all regions, province, cities & municipalities and barangays in Philippines. Created from MySQL using HeidiSQL
 
